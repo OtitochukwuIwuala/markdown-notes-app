@@ -1,0 +1,175 @@
+.sidebar {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 14px;
+  gap: 12px;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sidebarHeader h2 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.count {
+  margin: 0 0 3px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.newButton {
+  min-width: 70px;
+  min-height: 38px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  font-weight: 800;
+}
+
+.searchLabel {
+  display: grid;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.searchLabel input {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  color: var(--text);
+  padding: 0 12px;
+}
+
+.tagFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  max-height: 94px;
+  overflow: auto;
+}
+
+.tagFilter button,
+.noteTags span {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.tagFilter button {
+  min-height: 30px;
+  padding: 0 10px;
+}
+
+.tagFilter .activeTag {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.noteList {
+  display: grid;
+  align-content: start;
+  min-height: 0;
+  max-height: 100%;
+  gap: 10px;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.noteItem {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-strong);
+}
+
+.activeNote {
+  border-color: var(--accent);
+  box-shadow: inset 4px 0 0 var(--accent);
+}
+
+.noteButton {
+  display: grid;
+  width: 100%;
+  min-height: 118px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  padding: 12px 12px 38px;
+  text-align: left;
+}
+
+.noteTitle {
+  overflow: hidden;
+  font-weight: 800;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.noteMeta,
+.noteExcerpt {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.noteExcerpt {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-top: 7px;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.noteTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.noteTags span {
+  padding: 3px 8px;
+}
+
+.deleteButton {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  min-height: 26px;
+  border: 0;
+  background: transparent;
+  color: var(--warn);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.emptyState {
+  margin: 0;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  padding: 18px;
+  text-align: center;
+}

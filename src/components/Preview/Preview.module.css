@@ -1,0 +1,139 @@
+.preview {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.previewHeader {
+  border-bottom: 1px solid var(--border);
+  padding: 14px 16px;
+}
+
+.previewHeader p {
+  margin: 0 0 4px;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.previewHeader h2 {
+  overflow: hidden;
+  margin: 0;
+  font-size: 1.04rem;
+  letter-spacing: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.previewBody {
+  min-height: 0;
+  overflow: auto;
+  padding: 18px 22px 34px;
+  color: var(--text);
+  line-height: 1.68;
+}
+
+.previewBody h1,
+.previewBody h2,
+.previewBody h3 {
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.previewBody h1 {
+  font-size: 1.85rem;
+}
+
+.previewBody h2 {
+  margin-top: 1.6em;
+  font-size: 1.35rem;
+}
+
+.previewBody p,
+.previewBody li {
+  color: color-mix(in srgb, var(--text) 88%, var(--text-muted));
+}
+
+.previewBody a {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.previewBody blockquote {
+  margin-left: 0;
+  border-left: 4px solid var(--accent);
+  color: var(--text-muted);
+  padding-left: 14px;
+}
+
+.previewBody table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.previewBody th,
+.previewBody td {
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+}
+
+.previewBody th {
+  background: var(--surface-muted);
+}
+
+.previewBody code {
+  border-radius: 6px;
+  background: var(--surface-muted);
+  color: var(--text);
+  padding: 2px 5px;
+}
+
+.previewBody pre {
+  overflow-x: auto;
+  border-radius: 8px;
+  background: var(--code-bg);
+  padding: 14px;
+}
+
+.previewBody pre code {
+  display: block;
+  background: transparent;
+  color: var(--code-text);
+  padding: 0;
+}
+
+.previewBody img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.previewBody :global(.hljs-keyword),
+.previewBody :global(.hljs-selector-tag),
+.previewBody :global(.hljs-title.function_) {
+  color: #79c7ff;
+}
+
+.previewBody :global(.hljs-string),
+.previewBody :global(.hljs-attr) {
+  color: #9ee6a7;
+}
+
+.previewBody :global(.hljs-number),
+.previewBody :global(.hljs-literal) {
+  color: #ffbd7a;
+}
+
+.previewBody :global(.hljs-comment) {
+  color: #9ca8b6;
+}
+
+@media (max-width: 767px) {
+  .previewBody {
+    padding: 16px;
+  }
+}

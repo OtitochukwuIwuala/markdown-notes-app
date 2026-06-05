@@ -1,0 +1,145 @@
+.editor {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 14px;
+  gap: 12px;
+}
+
+.editorHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.titleInput {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 1.45rem;
+  font-weight: 850;
+  letter-spacing: 0;
+  outline-offset: 4px;
+}
+
+.editorActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.editorActions button {
+  min-height: 34px;
+  border: 1px solid color-mix(in srgb, var(--warn) 55%, var(--border));
+  border-radius: 8px;
+  background: transparent;
+  color: var(--warn);
+  font-weight: 800;
+  padding: 0 10px;
+}
+
+.tagsInput {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(100px, 130px);
+  align-items: start;
+  gap: 8px;
+}
+
+.tagChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 34px;
+}
+
+.tagChips button {
+  min-height: 30px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0 10px;
+}
+
+.tagsInput input {
+  width: 100%;
+  min-height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  color: var(--text);
+  padding: 0 10px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.toolbar button {
+  min-width: 42px;
+  min-height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-muted);
+  color: var(--text);
+  font-weight: 850;
+  padding: 0 11px;
+}
+
+.toolbar .exportButton {
+  margin-left: auto;
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  resize: none;
+  overflow: auto;
+  background: var(--surface-strong);
+  color: var(--text);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  padding: 16px;
+}
+
+@media (max-width: 767px) {
+  .editorHeader {
+    grid-template-columns: 1fr;
+  }
+
+  .editorActions {
+    justify-content: space-between;
+  }
+
+  .titleInput {
+    font-size: 1.2rem;
+  }
+
+  .tagsInput {
+    grid-template-columns: 1fr;
+  }
+
+  .toolbar .exportButton {
+    margin-left: 0;
+  }
+}

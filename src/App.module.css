@@ -1,0 +1,202 @@
+.app {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+  padding: 18px;
+  gap: 14px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  gap: 16px;
+  padding: 0 4px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.45rem;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.topbarActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-width: 0;
+}
+
+.saveStatus {
+  min-width: 112px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-align: right;
+}
+
+.iconButton,
+.sidebarToggle,
+.mobileTabs button {
+  min-height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.iconButton {
+  min-width: 72px;
+  padding: 0 14px;
+}
+
+.sidebarToggle {
+  padding: 0 14px;
+}
+
+.mobileTabs {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.mobileTabs button {
+  width: 100%;
+}
+
+.mobileTabs .activeTab {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.82fr) minmax(320px, 1.16fr) minmax(320px, 1.2fr);
+  align-self: start;
+  height: min(80vh, 100%);
+  min-height: 0;
+  gap: 14px;
+}
+
+.workspaceWithoutPreview {
+  grid-template-columns: minmax(250px, 0.78fr) minmax(420px, 2fr);
+}
+
+.workspaceSidebarCollapsed {
+  grid-template-columns: 58px minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.workspaceSidebarCollapsed.workspaceWithoutPreview {
+  grid-template-columns: 58px minmax(0, 1fr);
+}
+
+.pane {
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.editorPane,
+.previewPane,
+.sidebarPane {
+  display: flex;
+}
+
+.sidebarCollapsedPane {
+  background: var(--surface-strong);
+}
+
+.collapsedRail {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--accent-strong);
+  font-weight: 850;
+}
+
+.collapsedRail span {
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+  .workspace {
+    grid-template-columns: minmax(190px, 0.72fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .workspaceWithoutPreview {
+    grid-template-columns: minmax(190px, 0.72fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .app {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+  }
+
+  .topbar h1 {
+    font-size: 1.18rem;
+  }
+
+  .topbarActions {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .saveStatus {
+    min-width: auto;
+    font-size: 0.78rem;
+  }
+
+  .mobileTabs {
+    display: grid;
+  }
+
+  .workspace,
+  .workspaceWithoutPreview,
+  .workspaceSidebarCollapsed,
+  .workspaceSidebarCollapsed.workspaceWithoutPreview {
+    grid-template-columns: 1fr;
+  }
+
+  .pane {
+    min-height: 0;
+  }
+
+  .sidebarToggle {
+    display: none;
+  }
+
+  .mobileHidden {
+    display: none;
+  }
+}
