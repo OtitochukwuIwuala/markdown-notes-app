@@ -1,6 +1,6 @@
 # Markdown Notes
 
-Live demo: _Add your Vercel URL here after deployment._
+Live demo: _[https://markdown-notes-app-26.vercel.app](https://markdown-notes-app-26.vercel.app)_
 
 ![Markdown Notes screenshot](./docs/screenshot.png)
 
@@ -29,10 +29,6 @@ Build for production:
 ```bash
 npm run build
 ```
-
-## Deploy
-
-Deploy the repository to Vercel and set the framework preset to Vite. After deployment, replace the placeholder live demo link above with your production URL.
 
 ## Architecture
 
